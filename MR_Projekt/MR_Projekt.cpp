@@ -12,10 +12,19 @@ int main()
 	cin >> b;
 
 
-	wynik = (-b) / a;
+
+
+	if (a == 0)
+	{
+		wynik = (-b);
+
+	}
+	else
+	{
+		wynik = (-b) / a;
+	}
 
 	cout << "Miejcem zerowym tej funkcji jest " << wynik;
-
 
 	return 0;
 }
