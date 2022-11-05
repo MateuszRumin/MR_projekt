@@ -1,10 +1,25 @@
 ﻿#include <iostream>
 #include <cmath>
+#include <cstdlib>
 
 using namespace std;
 
-int main()
+int main(int argc, char* argv[])
 {
+	int x = 0;
+	while (x > 3 || x < 1)
+	{
+		cout << "                           MENU \n ";
+		cout << "1.Miejsce zerowe funkcji w postaci ax + b \n ";
+		cout << "2.Miejsce zerowe funkcji w postaci Ax + By + C = 0 \n ";
+		cout << "3.Miejsce zerowe funkcji kwadratowej w postaci ax^2 + bx + c \n ";
+		cout << "Wybieram : ";
+		cin >> x;
+		system("cls");
+	}
+
+
+
    
 	float a, b,c, wynik,wynik2=0,delta;
 	cout << "Podaj a: ";
@@ -92,11 +107,7 @@ int main()
 
 
 
-
-
-
-
-
+	system("pause");
 	return 0;
 }
 
