@@ -128,6 +128,31 @@ int main()
 			cin >> q;
 			cout << " \n ";
 
+			if (a == 0)cout << "a w postaci kanonicznej funkcji kwadratowej nie moze byc równe 0";
+			else
+			{
+
+				b =  -( (  2* a ) * p );
+				delta = -( (4 * a) * q );
+
+				if (delta == 0)
+				{
+					wynik = (-b) / (2 * a);
+					cout << "Miejcem zerowym funkcji kwadratowej w postaci ax^2 + bx + c dla liczb a: " << a << " b: " << b << " c: " << c << " jest: " << wynik << "\n\n";
+				}
+				else if (delta > 0)
+				{
+					delta = sqrt(delta);
+					wynik = (((-b) - delta)) / (2 * a);
+					wynik2 = (((-b) + delta)) / (2 * a);
+
+					cout << "Miejscami zerowymi funkcji kwadratowej w postaci ax^2 + bx + c dla liczb a: " << a << " b: " << b << " c: " << c << " jest: " << wynik << " oraz " << wynik2 << "\n\n";
+
+				}
+				else if (delta < 0)
+				{
+					cout << "Funkcji kwadratowa w postaci ax^2 + bx + c dla liczb a: " << a << " b: " << b << " c: " << c << " nie posiada miejsc zerowych \n\n";
+				}
 
 
 
@@ -135,7 +160,22 @@ int main()
 
 
 
-			cout << "Miejcem zerowym funkcji kwadratowej w postaci y= a(x-p)2+q dla liczb a: " << a << " p: " << p << " q: " << q << " jest: " << wynik << "\n\n";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			}
+			
 	   break;
 
 	}
