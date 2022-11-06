@@ -6,14 +6,15 @@ using namespace std;
 
 int main()
 {
-	float a=0, b=0, c=0, wynik=0, wynik2 = 0, delta=0;
+	float a=0, b=0, c=0, wynik=0, wynik2 = 0, delta=0,p=0,q=0;
 	int x = 0;
-	while (x > 3 || x < 1)
+	while (x > 4 || x < 1)
 		{
 			cout << "                           MENU \n ";
 			cout << "1. Miejsce zerowe funkcji liniowej w postaci ax + b \n ";
 			cout << "2. Miejsce zerowe funkcji liniowej w postaci Ax + By + C = 0 \n ";
 			cout << "3. Miejsce zerowe funkcji kwadratowej w postaci ax^2 + bx + c \n ";
+			cout << "4. Miejsce zerowe funkcji kwadratowej w postaci y= a(x-p)^2+q \n ";
 			cout << "Wybieram : ";
 			cin >> x;
 			system("cls");
@@ -118,6 +119,24 @@ int main()
 				}
 
 		break;
+		case 4:
+			cout << "Podaj a: ";
+			cin >> a;		
+			cout << "Podaj p: ";
+			cin >> p;
+			cout << "Podaj q: ";
+			cin >> q;
+			cout << " \n ";
+
+
+
+
+
+
+
+
+			cout << "Miejcem zerowym funkcji kwadratowej w postaci y= a(x-p)2+q dla liczb a: " << a << " p: " << p << " q: " << q << " jest: " << wynik << "\n\n";
+	   break;
 
 	}
 
