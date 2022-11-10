@@ -7,23 +7,26 @@ using namespace std;
 int main()
 {
 	float a=0, b=0, c=0, wynik=0, wynik2 = 0, delta=0,p=0,q=0;
-	int x = 0;
-	while (x > 4 || x < 1)
-		{
+	int x;
+
+
+
+		do{
 			cout << "                           MENU \n ";
 			cout << "1. Miejsce zerowe funkcji liniowej w postaci ax + b \n ";
 			cout << "2. Miejsce zerowe funkcji liniowej w postaci Ax + By + C = 0 \n ";
 			cout << "3. Miejsce zerowe funkcji kwadratowej w postaci ax^2 + bx + c \n ";
 			cout << "4. Miejsce zerowe funkcji kwadratowej w postaci y= a(x-p)^2+q \n ";
-			cout << "Wybieram : ";
+			cout << "5. Zamiana funkcji kwadratowej na iloczynowa \n ";
+			cout << "Wybieram: : ";
 			cin >> x;
 			system("cls");
-		}
+		}while (x > 5 || x < 1);
 
 	switch (x)
 	{
 		case 1:
-			
+
 			cout << "Podaj a: ";
 			cin >> a;
 			cout << "Podaj b: ";
@@ -45,7 +48,7 @@ int main()
 		break;
 
 		case 2:
-			
+
 			cout << "Podaj a: ";
 			cin >> a;
 			cout << "Podaj b: ";
@@ -69,7 +72,7 @@ int main()
 		break;
 
 		case 3:
-			
+
 			cout << "Podaj a: ";
 			cin >> a;
 			cout << "Podaj b: ";
@@ -121,7 +124,7 @@ int main()
 		break;
 		case 4:
 			cout << "Podaj a: ";
-			cin >> a;		
+			cin >> a;
 			cout << "Podaj p: ";
 			cin >> p;
 			cout << "Podaj q: ";
@@ -174,27 +177,106 @@ int main()
 
 
 
+
+
 			}
-			
+
 	   break;
+
+
+
+	   case 5:
+cout<<"Wybrales zamiane ogolna na iloczynowa"<<endl;
+    cout << "Podaj a: ";
+			cin >> a;
+			cout << "Podaj b: ";
+			cin >> b;
+			cout << "Podaj c: ";
+			cin >> c;
+			cout << " \n\n ";
+
+			if (a == 0)
+				{
+					if (b == 0)
+					{
+						wynik = (-c);
+
+					}
+					else
+						{
+							wynik = (-c) / b;
+						}
+
+					cout <<"Funkcja kwadratowej w postaci ax^2 + bx + c dla liczb a: " << a << " b: " << b << " c: " << c << " jest funkcja liniowa bx + c a jej miejcem zerowym jest : " << wynik << "\n\n";
+				}
+			else
+				{
+
+					delta = (b * b) - (4 * a * c);
+					if (delta == 0)
+						{
+							wynik = (-b) / (2 * a);
+							if(wynik > 0 || wynik2 > 0 )   cout<<"f(x)= "<<a<<"( x-"<<wynik<<endl;
+						}
+					else if (delta > 0)
+						{
+							delta = sqrt(delta);
+							wynik = (((-b) - delta)) / (2 * a);
+							wynik2 = (((-b) + delta)) / (2 * a);
+
+
+							if(wynik > 0 && wynik2 > 0 )   cout<<"f(x)= "<<a<<"( x-"<<wynik<<" ) ( x-"<<wynik2<<" ) "<<endl;
+
+
+							if(wynik < 0 && wynik2 < 0 ){
+                                wynik2 = wynik2*-1;
+                                wynik = wynik*-1;
+                                cout<<"f(x)= "<<a<<"( x+"<<wynik<<" ) ( x+"<<wynik2<<" ) "<<endl;
+							}
+
+							if(wynik > 0 && wynik2 < 0 ){
+                                wynik2 = wynik2*-1;
+                                  cout<<"f(x)= "<<a<<"( x-"<<wynik<<" ) ( x+"<<wynik2<<" ) "<<endl;
+							}
+
+                            if(wynik < 0 && wynik2 > 0 ){
+                                wynik = wynik*-1;
+                                  cout<<"f(x)= "<<a<<"( x+"<<wynik<<" ) ( x-"<<wynik2<<" ) "<<endl;
+							}
+
+
+						}
+					else if (delta < 0)
+						{
+							cout <<"Funkcji kwadratowa w postaci ax^2 + bx + c dla liczb a: " << a << " b: " << b << " c: " << c << " nie posiada miejsc zerowych \n\n";
+						}
+
+
+				}
+
+
+
+
+
+	       break;
 
 	}
 
-   
-	
 
 
 
 
-	
 
-	
 
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
 
 
 
