@@ -21,6 +21,8 @@ int main()
 			cout << "6. Zamiana funkcji kanoniczna na ogolna \n ";
 			cout << "7. Zamiana funkcji ogolna na kanoniczna \n ";
 			cout << "8. Zamiana funkcji iloczynowa  na ogolna \n ";
+			cout << "9. Zamiana funkcji iloczynowa  na kanoniczna \n ";
+			cout << "10. Zamiana funkcjikanoniczna na iloczynowa \n ";
 			cout << "Wybieram: : ";
 			cin >> x;
 
@@ -364,6 +366,81 @@ case 8:
 
 
 break;
+
+case 9:
+
+ cout << "Wybrales zamiane funkcji  z postaci iloczynowa na kanoniczną" << endl;
+        do {
+            cout << "Podaj a rozne od 0: ";
+            cin >> a;
+        } while (a == 0);
+        cout << "Podaj x1: ";
+        cin >> m_z1;
+        cout << "Podaj x2: ";
+        cin >> m_z2;
+        p = (m_z1 + m_z2) / 2;
+        q = a * (p - m_z1) * (p - m_z2);
+
+        if (p == 0) {
+            if (q == 0)cout << "Wzor tej funkcji w postaci kanonicznej to: " << a << "(x)^2 \n";
+            else if (q > 0)cout << "Wzor tej funkcji w postaci kanonicznej to: " << a << "(x)^2+" << q << "\n";
+            else if (q < 0)cout << "Wzor tej funkcji w postaci kanonicznej to: " << a << "(x)^2-" << -q << "\n";
+
+
+        }
+        else if (p > 0) {
+            if (q == 0)cout << "Wzor tej funkcji w postaci kanonicznej to: " << a << "(x-" << p << ")^2";
+            else if (q > 0)cout << "Wzor tej funkcji w postaci kanonicznej to: " << a << "(x-" << p << ")^2+" << q << "\n";
+            else if (q < 0)cout << "Wzor tej funkcji w postaci kanonicznej to: " << a << "(x-" << p << ")^2-" << -q << "\n";
+
+        }
+        else if (p < 0) {
+            if (q == 0)cout << "Wzor tej funkcji w postaci kanonicznej to: " << a << "(x+" << -p << ")^2";
+            else if (q > 0)cout << "Wzor tej funkcji w postaci kanonicznej to: " << a << "(x+" << -p << ")^2+" << q << "\n";
+            else if (q < 0)cout << "Wzor tej funkcji w postaci kanonicznej to: " << a << "(x+" << -p << ")^2-" << -q << "\n";
+        }
+
+
+break;
+
+case 10:
+
+ cout << "Wybrales zamiane  z postaci kanoniczna na iloczynowa" << endl;
+        do {
+            cout << "Podaj a rozne od 0: ";
+            cin >> a;
+        } while (a == 0);
+        cout << "Podaj p: "; cin >> p;
+        cout << "Podaj q: "; cin >> q;
+        c = -(q)/(a);
+        if (c < 0)c = -c;
+        c = sqrt(c);
+
+        m_z1 = p +c;
+        m_z2 = p -c;
+
+
+        if (m_z1 == 0) {
+            if (m_z2 == 0)cout << "Wzor tej funkcji w postaci ilozynowej to: " << a << "(x)^2 \n";
+            else if (m_z2 > 0)cout << "Wzor tej funkcji w postaci ilozynowej to: " << a << "(x)^2*" << "(x-" << m_z2 << ")^2 \n";
+            else if (m_z2 < 0)cout << "Wzor tej funkcji w postaci ilozynowej to: " << a << "(x)^2*" << "(x+" << -m_z2 << ")^2 \n";
+        }
+        else if (m_z1 > 0) {
+            if (m_z2 == 0)cout << "Wzor tej funkcji w postaci ilozynowej to: " << a << "(x)^2*" << "(x-" << m_z1 << ")^2 \n";
+            else if (m_z2 > 0)cout << "Wzor tej funkcji w postaci ilozynowej to: " << a << "(x-" << m_z1 << ")^2*" << "(x-" << m_z2 << ") ^ 2 \n";
+            else if (m_z2 < 0)cout << "Wzor tej funkcji w postaci ilozynowej to: " << a << "(x-" << m_z1 << ")^2*" << "(x+" << -m_z2 << ")^2 \n";
+        }
+        else if (m_z1 < 0) {
+            if (m_z2 == 0)cout << "Wzor tej funkcji w postaci ilozynowej to: " << a << "(x)^2*" << "(x+" << -m_z1 << ")^2 \n";
+            else if (m_z2 > 0)cout << "Wzor tej funkcji w postaci ilozynowej to: " << a << "(x+" << -m_z1 << ")^2*" << "(x-" << m_z2 << ") ^ 2 \n";
+            else if (m_z2 < 0)cout << "Wzor tej funkcji w postaci ilozynowej to: " << a << "(x+" << -m_z1 << ")^2*" << "(x+" << -m_z2 << ")^2 \n";
+        }
+
+
+
+
+    break;
+
 
 
 	}
